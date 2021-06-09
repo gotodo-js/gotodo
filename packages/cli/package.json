@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "description": "Gotodo command-line interface tool. Work in progress...",
+  "description": "The best todolist tool for developer. Work in progress...",
   "keywords": [
     "gotodo",
     "todo",
