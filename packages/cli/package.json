@@ -1,0 +1,24 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Gotodo command-line interface tool.",
+  "keywords": [
+    "gotodo",
+    "todo",
+    "todolist",
+    "react",
+  ],
+  "author": {
+    "name": "Yoki",
+    "email": "yokiyquian@gmail.com",
+    "url": "https://github.com/iamyoki"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gotodo-js/gotodo.git",
+    "directory": "packages/cli"
+  },
+  "bugs": "https://github.com/gotodo-js/gotodo/issues"
+}
