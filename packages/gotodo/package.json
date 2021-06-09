@@ -3,5 +3,23 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "description": "The best todolist tool for developer. Work in progress..."
+  "description": "The best todolist tool for developer. Work in progress...",
+  "keywords": [
+    "gotodo",
+    "todo",
+    "todolist",
+    "react",
+    "cli"
+  ],
+  "author": {
+    "name": "Yoki",
+    "email": "yokiyquian@gmail.com",
+    "url": "https://github.com/iamyoki"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gotodo-js/gotodo.git",
+    "directory": "packages/gotodo"
+  },
+  "bugs": "https://github.com/gotodo-js/gotodo/issues"
 }
