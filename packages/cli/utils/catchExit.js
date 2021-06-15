@@ -1,5 +1,4 @@
 const { Signale } = require('signale')
-const signale = require('signale')
 
 const logger = new Signale({
   types: {

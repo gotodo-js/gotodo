@@ -3,6 +3,7 @@
 const { prompt } = require('enquirer')
 const yargs = require('yargs')
 const { hideBin } = require('yargs/helpers')
+const gotodo = require('../commands/gotodo')
 
 /**
  * Design:
@@ -15,6 +16,18 @@ gotodo
 -  start  ‘start gotodo server’  (default to web) —desktop ‘start desktop app’
  */
 
-yargs(hideBin(process.argv)).usage(
-  `$0 \n\n 💘 The best todolist tool for developers.`
-).argv
+yargs(hideBin(process.argv))
+  .usage(`$0 \n\n 💘 The best todolist tool for developers.`)
+  .command('$0', 'Run command by prompts', {}, gotodo)
+  .command('add <something>', 'Add a todo', y =>
+    y.positional('something', {
+      desc: 'Write something to do',
+      type: 'string'
+    })
+  )
+  .command('done', 'Make a todo done')
+  /* Any command-line argument given that is not demanded, or does not have a corresponding description, will be reported as an error.
+  https://yargs.js.org/docs/#api-reference-strictenabledtrue */
+  .strict()
+  .alias('help', 'h')
+  .alias('version', 'v').argv
