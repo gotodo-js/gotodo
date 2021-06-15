@@ -25,7 +25,7 @@ yargs(hideBin(process.argv))
       type: 'string'
     })
   )
-  .command('done', 'Make a todo done')
+  .command('done', 'Done a todo')
   /* Any command-line argument given that is not demanded, or does not have a corresponding description, will be reported as an error.
   https://yargs.js.org/docs/#api-reference-strictenabledtrue */
   .strict()
