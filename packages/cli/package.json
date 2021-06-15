@@ -32,5 +32,8 @@
     "enquirer": "^2.3.6",
     "signale": "^1.4.0",
     "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "prompts": "^2.4.1"
   }
 }
