@@ -5,6 +5,7 @@ const { hideBin } = require('yargs/helpers')
 const add = require('../commands/add')
 const done = require('../commands/done')
 const gotodo = require('../commands/gotodo')
+const list = require('../commands/list')
 
 /**
  * Design:
@@ -37,6 +38,28 @@ yargs(hideBin(process.argv))
     add
   )
   .command('done', 'Done a todo', {}, done)
+  .command(
+    'list',
+    'List todos',
+    (y) =>
+      y
+        .option('done', {
+          alias: 'd',
+          desc: 'List all finished todos',
+          type: 'boolean',
+        })
+        .option('tag', {
+          alias: 't',
+          desc: 'List all tags',
+          type: 'boolean',
+        })
+        .option('all', {
+          alias: 'a',
+          desc: 'List all todos, including finished',
+          type: 'boolean',
+        }),
+    list
+  )
   /* Any command-line argument given that is not demanded, or does not have a corresponding description, will be reported as an error.
   https://yargs.js.org/docs/#api-reference-strictenabledtrue */
   .strict()
