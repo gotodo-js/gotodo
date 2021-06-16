@@ -21,5 +21,6 @@ module.exports = async function done(argv) {
     message: 'Choose a todo to make it done.',
   })
 
+  logs.wrap()
   logs.done(selected)
 }

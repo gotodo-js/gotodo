@@ -22,12 +22,26 @@ function logs(title, message, ...rest) {
   }
 }
 
+logs.wrap = () => console.log('\n')
+
 logs.done = (...rest) => {
-  logs(chalk.green(`✅ Done:`), ...rest)
+  logs(chalk.green(`✅ Done Todo:`), ...rest)
 }
 
 logs.error = (...rest) => {
   logs(chalk.red(`❌ Error:`), ...rest)
+}
+
+logs.addTodo = (...rest) => {
+  logs(chalk.keyword('coral')(`🎯 Add Todo:`), ...rest)
+}
+
+logs.createTag = (...rest) => {
+  logs(chalk.cyan(`🏷️  Create Tag:`), ...rest)
+}
+
+logs.end = (...rest) => {
+  logs(chalk.bold(`✨ Done`), ...rest)
 }
 
 module.exports = logs
