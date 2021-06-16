@@ -29,7 +29,7 @@
   "dependencies": {
     "boxen": "^5.0.1",
     "chalk": "^4.1.1",
-    "enquirer": "^2.3.6",
+    "prompts": "^2.4.1",
     "signale": "^1.4.0",
     "yargs": "^17.0.1"
   }

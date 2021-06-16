@@ -1,8 +1,8 @@
 #!/usr/bin/env node --trace-warnings
 
-const { prompt } = require('enquirer')
 const yargs = require('yargs')
 const { hideBin } = require('yargs/helpers')
+const add = require('../commands/add')
 const gotodo = require('../commands/gotodo')
 
 /**
@@ -19,11 +19,21 @@ gotodo
 yargs(hideBin(process.argv))
   .usage(`$0 \n\n 💘 The best todolist tool for developers.`)
   .command('$0', 'Run command by prompts', {}, gotodo)
-  .command('add <something>', 'Add a todo', y =>
-    y.positional('something', {
-      desc: 'Write something to do',
-      type: 'string'
-    })
+  .command(
+    'add <something>',
+    'Add a todo',
+    (y) =>
+      y
+        .positional('something', {
+          desc: 'Write something to do',
+          type: 'string',
+        })
+        .option('tags', {
+          alias: 't',
+          type: 'array',
+          desc: 'Specify the tags to add on. e.g. --tag=a,b,c',
+        }),
+    add
   )
   .command('done', 'Make a todo done')
   /* Any command-line argument given that is not demanded, or does not have a corresponding description, will be reported as an error.
