@@ -3,6 +3,7 @@
 const yargs = require('yargs')
 const { hideBin } = require('yargs/helpers')
 const add = require('../commands/add')
+const done = require('../commands/done')
 const gotodo = require('../commands/gotodo')
 
 /**
@@ -35,7 +36,7 @@ yargs(hideBin(process.argv))
         }),
     add
   )
-  .command('done', 'Make a todo done')
+  .command('done', 'Done a todo', {}, done)
   /* Any command-line argument given that is not demanded, or does not have a corresponding description, will be reported as an error.
   https://yargs.js.org/docs/#api-reference-strictenabledtrue */
   .strict()
